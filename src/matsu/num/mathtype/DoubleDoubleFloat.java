@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/mit-license.php
  */
 /*
- * 2024.10.6
+ * 2024.10.7
  */
 package matsu.num.mathtype;
 
@@ -619,7 +619,7 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
     /**
      * 与えられた {@code double} 値に対応する
-     * double-double 浮動小数点数のインスタンスを生成する.
+     * double-double 浮動小数点数のインスタンスを返す.
      * 
      * <p>
      * {@code dd = valueOf(value)} について,
@@ -636,7 +636,7 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
     /**
      * 与えられた {@link BigDecimal} 値に対応する
-     * double-double 浮動小数点数のインスタンスを生成する.
+     * double-double 浮動小数点数のインスタンスを返す.
      * 
      * @param value 値
      * @return valueと同等のインスタンス
@@ -658,7 +658,7 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
     /**
      * テスト用であり非公開.
      * 与えられた {@code double} 値に対応する
-     * double-double 浮動小数点数のインスタンスを生成する.
+     * double-double 浮動小数点数のインスタンスを返す.
      * 
      * <p>
      * 十分にバリデーションされていない.
