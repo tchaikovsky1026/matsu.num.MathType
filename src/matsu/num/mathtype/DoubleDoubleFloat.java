@@ -205,16 +205,18 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
      * 自身と引数とを比較する. <br>
      * このクラスのインスタンスに関する順序ルールは, クラス説明文のとおりである.
      * 
-     * @param o 比較相手
-     * @return {@code this > o} なら正, {@code this = o} なら0, {@code this < o} なら負
+     * @param other 比較相手
+     * @return {@code this > other} なら正,
+     *             {@code this = other} なら0,
+     *             {@code this < other} なら負
      * @throws NullPointerException 引数がnullの場合
      */
     @Override
-    public int compareTo(DoubleDoubleFloat o) {
-        int result = Double.compare(this.high, o.high);
+    public int compareTo(DoubleDoubleFloat other) {
+        int result = Double.compare(this.high, other.high);
         return result != 0
                 ? result
-                : Double.compare(this.low, o.low);
+                : Double.compare(this.low, other.low);
     }
 
     /**
@@ -288,8 +290,7 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
             /*
              * 特殊値の定数は必ずnegatedが登録されているので, 書き換えられない.
-             * canonicalizedで新しいインスタンスを生成した場合は,
-             * 外部に参照が漏れていないので,
+             * canonicalizedで新しいインスタンスを生成した場合は外部に参照が漏れていないので,
              * このチェックで問題ない.
              */
             if (Objects.isNull(out.negated)) {
@@ -618,12 +619,12 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
     /**
      * 与えられた {@code double} 値に対応する
-     * double-double浮動小数点数のインスタンスを生成する.
+     * double-double 浮動小数点数のインスタンスを生成する.
      * 
      * <p>
-     * {@code Double.valueOf(dd.doubleValue())} と
-     * {@code Double.valueOf(value)}
-     * が等価であることが保証されている.
+     * {@code dd = valueOf(value)} について,
+     * {@code dd.doubleValue()} と {@code value}
+     * が ({@link Double} の文脈で) 等価であることが保証されている.
      * </p>
      * 
      * @param value 値
@@ -635,7 +636,7 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
     /**
      * 与えられた {@link BigDecimal} 値に対応する
-     * double-double浮動小数点数のインスタンスを生成する.
+     * double-double 浮動小数点数のインスタンスを生成する.
      * 
      * @param value 値
      * @return valueと同等のインスタンス
@@ -656,7 +657,8 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
     /**
      * テスト用であり非公開.
-     * 与えられた {@code double} 値に対応する double-double浮動小数点数のインスタンスを生成する.
+     * 与えられた {@code double} 値に対応する
+     * double-double 浮動小数点数のインスタンスを生成する.
      * 
      * <p>
      * 十分にバリデーションされていない.
