@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/mit-license.php
  */
 /*
- * 2024.10.7
+ * 2024.10.9
  */
 package matsu.num.mathtype;
 
@@ -567,16 +567,6 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
             return notFiniteValue(high);
         }
 
-        //Double.MAX_VALUEを超える場合は無限大に置き換える
-        if (Math.abs(high) == Double.MAX_VALUE) {
-            if (high > 0d && low > 0d) {
-                return notFiniteValue(Double.POSITIVE_INFINITY);
-            }
-            if (high < 0d && low < 0d) {
-                return notFiniteValue(Double.NEGATIVE_INFINITY);
-            }
-        }
-
         assert (high == 0d || Math.abs(high) >= Math.abs(low)) : String.format(
                 "high != 0d であり, かつ|high| >= |low|を満たさない: high = %s, low = %s", high, low);
 
@@ -594,6 +584,16 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
         if (!Double.isFinite(s)) {
             return notFiniteValue(s);
+        }
+
+        //Double.MAX_VALUEを超える場合は無限大に置き換える
+        if (Math.abs(s) == Double.MAX_VALUE) {
+            if (s > 0d && e > 0d) {
+                return notFiniteValue(Double.POSITIVE_INFINITY);
+            }
+            if (s < 0d && e < 0d) {
+                return notFiniteValue(Double.NEGATIVE_INFINITY);
+            }
         }
 
         assert 0.5 * Math.ulp(s) >= Math.abs(e) : String.format(
