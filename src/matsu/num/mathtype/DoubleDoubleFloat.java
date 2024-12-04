@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/mit-license.php
  */
 /*
- * 2024.10.9
+ * 2024.12.5
  */
 package matsu.num.mathtype;
 
