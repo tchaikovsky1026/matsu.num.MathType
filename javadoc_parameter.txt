@@ -1,4 +1,0 @@
-(Antビルド: javadoc)
-packagenames="
-        		matsu.num.mathtype,
-    		"
