@@ -5,7 +5,7 @@
  * http://opensource.org/licenses/mit-license.php
  */
 /*
- * 2024.12.5
+ * 2024.12.25
  */
 package matsu.num.mathtype;
 
@@ -30,7 +30,7 @@ import java.util.stream.IntStream;
  * </p>
  * 
  * @author Matsuura Y.
- * @version 1.0
+ * @version 2.1
  */
 public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
@@ -196,7 +196,8 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
      * このインスタンスのハッシュコードを計算する.
      */
     private int calcHashCode() {
-        int result = Double.hashCode(this.high);
+        int result = 1;
+        result = 31 * result + Double.hashCode(this.high);
         result = 31 * result + Double.hashCode(this.low);
         return result;
     }

@@ -6,7 +6,7 @@
  * </p>
  * 
  * @author Matsuura Y.
- * @version 2.0
+ * @version 2.1
  */
 module matsu.num.MathType {
     exports matsu.num.mathtype;
