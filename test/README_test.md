@@ -1,4 +1,4 @@
-# matsu.num.MathType
+# matsu.num.MathType, test
 フォルダ `test` はテストクラスを扱い, ディストリビューションには含まれない.
 
 `JUnit4` フレームワークを使用した自動テストがあり,
