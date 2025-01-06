@@ -1,9 +1,13 @@
+/*
+ * Copyright © 2024 Matsuura Y.
+ * 
+ * This software is released under the MIT License.
+ * http://opensource.org/licenses/mit-license.php
+ */
 package matsu.num.mathtype;
 
 /**
  * {@link DoubleDoubleFloat} に関するユーティリティ(テスト用).
- * 
- * @author Matsuura Y.
  */
 final class DoubleDoubleFloatUtil {
 

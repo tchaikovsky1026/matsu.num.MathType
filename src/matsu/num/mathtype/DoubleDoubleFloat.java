@@ -4,6 +4,7 @@
  * This software is released under the MIT License.
  * http://opensource.org/licenses/mit-license.php
  */
+
 /*
  * 2024.12.25
  */
@@ -30,7 +31,7 @@ import java.util.stream.IntStream;
  * </p>
  * 
  * @author Matsuura Y.
- * @version 2.1
+ * @version 3.1
  */
 public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
