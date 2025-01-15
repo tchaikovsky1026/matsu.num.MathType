@@ -31,7 +31,6 @@ import java.util.stream.IntStream;
  * </p>
  * 
  * @author Matsuura Y.
- * @version 3.1
  */
 public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
