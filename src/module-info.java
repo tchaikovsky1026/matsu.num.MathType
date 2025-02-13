@@ -14,7 +14,7 @@
  * </p>
  * 
  * @author Matsuura Y.
- * @version 3.1
+ * @version 4.0.0
  */
 module matsu.num.MathType {
     exports matsu.num.mathtype;
