@@ -166,8 +166,6 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
     /**
      * 自身と与えれらたインスタンスが等価であるかを判定する. <br>
      * このクラスのインスタンスに関する等価性のルールは, クラス説明文のとおりである.
-     * 
-     * @return 等価の場合はtrue
      */
     @Override
     public boolean equals(Object obj) {
@@ -184,8 +182,6 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
 
     /**
      * このインスタンスのハッシュコードを返す.
-     * 
-     * @return ハッシュコード
      */
     @Override
     public int hashCode() {
@@ -232,8 +228,6 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
      * {@link #valueOf(BigDecimal)} によるインスタンスの生成を行った場合,
      * 自身と等価であることは保証されない.
      * </p>
-     * 
-     * @return 文字列表現
      */
     @Override
     public String toString() {
