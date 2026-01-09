@@ -255,11 +255,9 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
         //単一チェックイディオム
         //nageted()は無駄なインスタンスを生成しないので,
         //複数回の呼び出しは問題ない
-        out = this.compareTo(POSITIVE_0) >= 0
+        return this.abs = this.compareTo(POSITIVE_0) >= 0
                 ? this
                 : this.negated();
-        this.abs = out;
-        return out;
     }
 
     /**
@@ -295,8 +293,7 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
              * this.negated への代入をこの位置で行い, happens-before を確定させる.
              * この位置で代入しなくても問題は生じないが, 状態確定ポイントを明確にするためにこの位置に置いた.
              */
-            this.negated = out;
-            return out;
+            return this.negated = out;
         }
     }
 
