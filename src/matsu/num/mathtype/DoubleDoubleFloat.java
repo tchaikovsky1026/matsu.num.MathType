@@ -6,7 +6,7 @@
  */
 
 /*
- * 2024.12.25
+ * 2026.1.9
  */
 package matsu.num.mathtype;
 
@@ -281,7 +281,6 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
             }
 
             out = canonicalized(-this.high, -this.low);
-            this.negated = out;
 
             /*
              * 特殊値の定数は必ずnegatedが登録されているので, 書き換えられない.
@@ -292,6 +291,11 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
                 out.negated = this;
             }
 
+            /*
+             * this.negated への代入をこの位置で行い, happens-before を確定させる.
+             * この位置で代入しなくても問題は生じないが, 状態確定ポイントを明確にするためにこの位置に置いた.
+             */
+            this.negated = out;
             return out;
         }
     }
