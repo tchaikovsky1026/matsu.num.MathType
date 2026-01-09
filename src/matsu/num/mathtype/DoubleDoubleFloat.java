@@ -199,13 +199,13 @@ public final class DoubleDoubleFloat implements Comparable<DoubleDoubleFloat> {
     }
 
     /**
-     * 自身と引数とを比較する. <br>
-     * このクラスのインスタンスに関する順序ルールは, クラス説明文のとおりである.
+     * 自身と引数とを比較する.
      * 
-     * @param other 比較相手
-     * @return {@code this > other} なら正,
-     *             {@code this = other} なら0,
-     *             {@code this < other} なら負
+     * <p>
+     * このクラスのインスタンスに関する順序ルールは, クラス説明文のとおりである. <br>
+     * {@link #equals(Object)} と整合する.
+     * </p>
+     * 
      * @throws NullPointerException 引数がnullの場合
      */
     @Override
